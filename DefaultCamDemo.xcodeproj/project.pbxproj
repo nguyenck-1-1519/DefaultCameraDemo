@@ -14,6 +14,7 @@
 		1B67B0472241330400B0CC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B0462241330400B0CC34 /* Assets.xcassets */; };
 		1B67B04A2241330400B0CC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B0482241330400B0CC34 /* LaunchScreen.storyboard */; };
 		1B67B05222413E6400B0CC34 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */; };
+		61842F252241DB0600B6AD0E /* AnalysisResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1B67B04B2241330400B0CC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		3CC69A181BA63C3C4ED8CAF2 /* Pods-DefaultCamDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefaultCamDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DefaultCamDemo/Pods-DefaultCamDemo.release.xcconfig"; sourceTree = "<group>"; };
+		61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1B67B03F2241330200B0CC34 /* AppDelegate.swift */,
 				1B67B0412241330200B0CC34 /* ViewController.swift */,
 				1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */,
+				61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */,
 				1B67B0432241330200B0CC34 /* Main.storyboard */,
 				1B67B0462241330400B0CC34 /* Assets.xcassets */,
 				1B67B0482241330400B0CC34 /* LaunchScreen.storyboard */,
@@ -206,6 +209,7 @@
 				1B67B0422241330200B0CC34 /* ViewController.swift in Sources */,
 				1B67B05222413E6400B0CC34 /* ImageDetailViewController.swift in Sources */,
 				1B67B0402241330200B0CC34 /* AppDelegate.swift in Sources */,
+				61842F252241DB0600B6AD0E /* AnalysisResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +360,10 @@
 				DEVELOPMENT_TEAM = KG5F9H52Q8;
 				INFOPLIST_FILE = DefaultCamDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = shin.DefaultCamDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -373,7 +380,10 @@
 				DEVELOPMENT_TEAM = KG5F9H52Q8;
 				INFOPLIST_FILE = DefaultCamDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = shin.DefaultCamDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

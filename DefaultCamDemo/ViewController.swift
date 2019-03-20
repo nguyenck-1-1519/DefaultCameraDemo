@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             return
         }
         viewController.contentImage = image
-        self.present(viewController, animated: true, completion: nil)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     @IBAction func onCameraButtonClicked(_ sender: Any) {
