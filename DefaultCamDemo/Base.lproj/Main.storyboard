@@ -115,22 +115,41 @@
                                     <constraint firstAttribute="bottom" secondItem="Ffi-Lh-H6u" secondAttribute="bottom" id="mQJ-CR-b43"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-v4-rA8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x0f-BO-o0v">
+                                        <rect key="frame" x="177.5" y="313.5" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="x0f-BO-o0v" firstAttribute="centerX" secondItem="dqh-v4-rA8" secondAttribute="centerX" id="Epn-tQ-aKz"/>
+                                    <constraint firstItem="x0f-BO-o0v" firstAttribute="centerY" secondItem="dqh-v4-rA8" secondAttribute="centerY" id="iXU-ck-i7n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zsr-LD-Anc" firstAttribute="trailing" secondItem="dqh-v4-rA8" secondAttribute="trailing" id="0c8-vl-IrC"/>
                             <constraint firstItem="zsr-LD-Anc" firstAttribute="trailing" secondItem="VXk-en-6Pw" secondAttribute="trailing" id="5j0-4C-Dfa"/>
                             <constraint firstItem="TrF-we-6HV" firstAttribute="top" secondItem="zsr-LD-Anc" secondAttribute="top" id="7dr-t6-beJ"/>
                             <constraint firstItem="TrF-we-6HV" firstAttribute="leading" secondItem="zsr-LD-Anc" secondAttribute="leading" id="90L-8X-bat"/>
                             <constraint firstItem="VXk-en-6Pw" firstAttribute="top" secondItem="zsr-LD-Anc" secondAttribute="top" id="CbF-Uj-vR3"/>
+                            <constraint firstItem="dqh-v4-rA8" firstAttribute="top" secondItem="zsr-LD-Anc" secondAttribute="top" id="Gz5-b3-JgX"/>
+                            <constraint firstItem="zsr-LD-Anc" firstAttribute="bottom" secondItem="dqh-v4-rA8" secondAttribute="bottom" id="IFH-9Y-wPn"/>
                             <constraint firstItem="VXk-en-6Pw" firstAttribute="leading" secondItem="zsr-LD-Anc" secondAttribute="leading" id="IXb-c3-Vz4"/>
+                            <constraint firstItem="dqh-v4-rA8" firstAttribute="leading" secondItem="zsr-LD-Anc" secondAttribute="leading" id="ahx-Vz-DNp"/>
                             <constraint firstItem="zsr-LD-Anc" firstAttribute="bottom" secondItem="VXk-en-6Pw" secondAttribute="bottom" id="r7N-05-jMq"/>
                             <constraint firstItem="zsr-LD-Anc" firstAttribute="trailing" secondItem="TrF-we-6HV" secondAttribute="trailing" id="vlZ-g1-rOm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zsr-LD-Anc"/>
                     </view>
                     <connections>
+                        <outlet property="backDropView" destination="dqh-v4-rA8" id="slP-l6-Q7f"/>
                         <outlet property="contentImageView" destination="VXk-en-6Pw" id="bbs-1F-Eqq"/>
                         <outlet property="dismissButton" destination="YrY-eh-h0z" id="z1n-hn-mMM"/>
+                        <outlet property="indicator" destination="x0f-BO-o0v" id="QeB-fE-PsQ"/>
                         <outlet property="uploadButton" destination="Ffi-Lh-H6u" id="bhb-cT-9Vw"/>
                     </connections>
                 </viewController>
