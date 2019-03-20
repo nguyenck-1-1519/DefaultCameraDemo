@@ -7,4 +7,5 @@ target 'DefaultCamDemo' do
 
   # Pods for DefaultCamDemo
 	pod 'Alamofire'
+	pod 'ObjectMapper'
 end
