@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ObjectMapper
 
 class ImageDetailViewController: UIViewController {
     
@@ -35,7 +36,7 @@ class ImageDetailViewController: UIViewController {
         backDropView.isHidden = !isShow
     }
 
-    private func showResult(response: DataResponse<Any>) {
+    private func showResult(response: ApiResponse) {
         guard let resultController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AnalysisResultViewController") as? AnalysisResultViewController else {
             return
         }
@@ -51,17 +52,33 @@ class ImageDetailViewController: UIViewController {
         showIndicator(true)
         Alamofire.upload(
             multipartFormData: { multipartFormData in
-                multipartFormData.append(imageData, withName: "file", fileName: fileName, mimeType: "image/jpeg")
-                multipartFormData.append("uploadImage".data(using: String.Encoding.utf8) ?? Data(), withName: "folder")
+                multipartFormData.append(imageData, withName: "image", fileName: fileName, mimeType: "image/png")
         },
-            to: "http://192.168.15.71:8800/upload.php",
+            to: "http://192.168.19.18:9669/api/ocr",
             encodingCompletion: { [weak self] encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
-                        self?.showIndicator(false)
-                        debugPrint(response)
-                        self?.showResult(response: response)
+                        switch response.result {
+                        case .success(let value):
+                            debugPrint(response)
+                            self?.showIndicator(false)
+                            guard let statusCode = response.response?.statusCode else {
+                                return
+                            }
+                            if statusCode == 200 {
+                                guard let apiResponse = Mapper<ApiResponse>().map(JSONObject: value) else {
+                                    return
+                                }
+                                self?.showResult(response: apiResponse)
+                            } else {
+                                let apiResponse = Mapper<ApiResponse>().map(JSONObject: value)
+                                self?.showAlert(isSuccess: false, message: apiResponse?.message)
+                            }
+                        case .failure(let error):
+                            self?.showAlert(isSuccess: false, message: error.localizedDescription)
+                            print(error.localizedDescription)
+                        }
                     }
                 case .failure(let encodingError):
                     self?.showIndicator(false)
@@ -71,10 +88,13 @@ class ImageDetailViewController: UIViewController {
         })
     }
 
-    private func showAlert(isSuccess: Bool) {
+    private func showAlert(isSuccess: Bool, message: String? = nil) {
         let title = isSuccess ? "Success" : "Error"
-        let message = isSuccess ? "Upload image success" : "There is something wrong"
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        var messageDisplay = isSuccess ? "Upload success" : "Upload fail"
+        if let message = message {
+            messageDisplay = message
+        }
+        let alertController = UIAlertController(title: title, message: messageDisplay, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
         }
         alertController.addAction(okAction)

@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
+    @objc private func back() {
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func onCameraButtonClicked(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera

@@ -127,32 +127,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIo-iK-tmd">
-                                <rect key="frame" x="20" y="40" width="52.5" height="21"/>
+                                <rect key="frame" x="20" y="40" width="52.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-bL-nmY">
-                                <rect key="frame" x="20" y="81" width="335" height="566"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-fB-0Wh">
+                                <rect key="frame" x="20" y="70.5" width="335" height="576.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-nc-3CT">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="576.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgR-wv-9hN">
+                                                <rect key="frame" x="0.0" y="5" width="52.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t6V-pp-if2">
+                                                <rect key="frame" x="0.0" y="33.5" width="165" height="543"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="t6V-pp-if2" firstAttribute="leading" secondItem="eYj-nc-3CT" secondAttribute="leading" id="5If-de-3da"/>
+                                            <constraint firstItem="t6V-pp-if2" firstAttribute="top" secondItem="mgR-wv-9hN" secondAttribute="bottom" constant="8" id="Bi2-jN-ycm"/>
+                                            <constraint firstAttribute="bottom" secondItem="t6V-pp-if2" secondAttribute="bottom" id="GM6-fc-601"/>
+                                            <constraint firstItem="mgR-wv-9hN" firstAttribute="leading" secondItem="eYj-nc-3CT" secondAttribute="leading" id="UDE-EW-dj6"/>
+                                            <constraint firstAttribute="trailing" secondItem="t6V-pp-if2" secondAttribute="trailing" id="uuQ-MR-UF6"/>
+                                            <constraint firstItem="mgR-wv-9hN" firstAttribute="top" secondItem="eYj-nc-3CT" secondAttribute="top" constant="5" id="xXn-am-Myd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIl-N4-zvi">
+                                        <rect key="frame" x="170" y="0.0" width="165" height="576.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJz-uN-qKc">
+                                                <rect key="frame" x="0.0" y="5" width="55" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vLc-vR-qID">
+                                                <rect key="frame" x="0.0" y="30.5" width="165" height="546"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vLc-vR-qID" secondAttribute="trailing" id="3W7-g6-DY2"/>
+                                            <constraint firstItem="hJz-uN-qKc" firstAttribute="top" secondItem="yIl-N4-zvi" secondAttribute="top" constant="5" id="Iid-Uo-PDo"/>
+                                            <constraint firstItem="vLc-vR-qID" firstAttribute="top" secondItem="hJz-uN-qKc" secondAttribute="bottom" constant="5" id="KsP-lw-0Ko"/>
+                                            <constraint firstItem="vLc-vR-qID" firstAttribute="leading" secondItem="yIl-N4-zvi" secondAttribute="leading" id="n3x-lB-cjX"/>
+                                            <constraint firstAttribute="bottom" secondItem="vLc-vR-qID" secondAttribute="bottom" id="xiF-br-jUW"/>
+                                            <constraint firstItem="hJz-uN-qKc" firstAttribute="leading" secondItem="yIl-N4-zvi" secondAttribute="leading" id="xwJ-t3-26c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GxE-bL-nmY" firstAttribute="top" secondItem="kIo-iK-tmd" secondAttribute="bottom" constant="20" id="3vE-Cp-Tft"/>
-                            <constraint firstItem="d1l-ja-kqF" firstAttribute="bottom" secondItem="GxE-bL-nmY" secondAttribute="bottom" constant="20" id="5ch-sR-DBW"/>
                             <constraint firstItem="kIo-iK-tmd" firstAttribute="top" secondItem="d1l-ja-kqF" secondAttribute="top" constant="20" id="KWP-WS-PiO"/>
-                            <constraint firstItem="GxE-bL-nmY" firstAttribute="leading" secondItem="d1l-ja-kqF" secondAttribute="leading" constant="20" id="Ptz-ky-4Gi"/>
-                            <constraint firstItem="d1l-ja-kqF" firstAttribute="trailing" secondItem="GxE-bL-nmY" secondAttribute="trailing" constant="20" id="adw-z4-pg9"/>
+                            <constraint firstItem="d1l-ja-kqF" firstAttribute="bottom" secondItem="Foh-fB-0Wh" secondAttribute="bottom" constant="20" id="NKH-jX-H5J"/>
+                            <constraint firstItem="d1l-ja-kqF" firstAttribute="trailing" secondItem="Foh-fB-0Wh" secondAttribute="trailing" constant="20" id="Rx6-HY-Rao"/>
+                            <constraint firstItem="Foh-fB-0Wh" firstAttribute="leading" secondItem="d1l-ja-kqF" secondAttribute="leading" constant="20" id="bYA-ni-ktK"/>
+                            <constraint firstItem="Foh-fB-0Wh" firstAttribute="top" secondItem="kIo-iK-tmd" secondAttribute="bottom" constant="10" id="o3n-by-i82"/>
                             <constraint firstItem="kIo-iK-tmd" firstAttribute="leading" secondItem="d1l-ja-kqF" secondAttribute="leading" constant="20" id="tde-cg-EwU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d1l-ja-kqF"/>
                     </view>
                     <connections>
-                        <outlet property="analysisResultTextView" destination="GxE-bL-nmY" id="vKa-ci-dfC"/>
+                        <outlet property="analysisResultData1TextView" destination="t6V-pp-if2" id="u4R-lU-Fzs"/>
+                        <outlet property="analysisResultData2TextView" destination="vLc-vR-qID" id="dkb-yM-9v5"/>
+                        <outlet property="stackView" destination="Foh-fB-0Wh" id="kn7-ha-osP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ci-o3-5AM" userLabel="First Responder" sceneMemberID="firstResponder"/>
