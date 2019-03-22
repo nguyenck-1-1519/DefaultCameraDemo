@@ -14,6 +14,7 @@ class AnalysisResultViewController: UIViewController {
     @IBOutlet weak var analysisResultData1TextView: UITextView!
     @IBOutlet weak var analysisResultData2TextView: UITextView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var nameLabel: UILabel!
 
     var analysisResponse: ApiResponse!
 
@@ -24,6 +25,7 @@ class AnalysisResultViewController: UIViewController {
         }
         analysisResultData1TextView.text = getDataString(data: apiResponse.data1)
         analysisResultData2TextView.text = getDataString(data: apiResponse.data2)
+        nameLabel.text = "Name: \(apiResponse.formName ?? "")"
         stackView.axis = formType == 1 ? .vertical : .horizontal
 
         // add gesture

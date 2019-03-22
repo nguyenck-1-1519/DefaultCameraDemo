@@ -126,17 +126,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIo-iK-tmd">
-                                <rect key="frame" x="20" y="40" width="52.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIo-iK-tmd">
+                                <rect key="frame" x="20" y="40" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Foh-fB-0Wh">
-                                <rect key="frame" x="20" y="70.5" width="335" height="576.5"/>
+                                <rect key="frame" x="20" y="68" width="335" height="579"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-nc-3CT">
-                                        <rect key="frame" x="0.0" y="0.0" width="165" height="576.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="579"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgR-wv-9hN">
                                                 <rect key="frame" x="0.0" y="5" width="52.5" height="20.5"/>
@@ -145,7 +145,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t6V-pp-if2">
-                                                <rect key="frame" x="0.0" y="33.5" width="165" height="543"/>
+                                                <rect key="frame" x="0.0" y="33.5" width="165" height="545.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -163,7 +163,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIl-N4-zvi">
-                                        <rect key="frame" x="170" y="0.0" width="165" height="576.5"/>
+                                        <rect key="frame" x="170" y="0.0" width="165" height="579"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJz-uN-qKc">
                                                 <rect key="frame" x="0.0" y="5" width="55" height="20.5"/>
@@ -172,7 +172,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vLc-vR-qID">
-                                                <rect key="frame" x="0.0" y="30.5" width="165" height="546"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="165" height="548.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -194,6 +194,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="d1l-ja-kqF" firstAttribute="trailing" secondItem="kIo-iK-tmd" secondAttribute="trailing" constant="20" id="CXI-ir-SR1"/>
                             <constraint firstItem="kIo-iK-tmd" firstAttribute="top" secondItem="d1l-ja-kqF" secondAttribute="top" constant="20" id="KWP-WS-PiO"/>
                             <constraint firstItem="d1l-ja-kqF" firstAttribute="bottom" secondItem="Foh-fB-0Wh" secondAttribute="bottom" constant="20" id="NKH-jX-H5J"/>
                             <constraint firstItem="d1l-ja-kqF" firstAttribute="trailing" secondItem="Foh-fB-0Wh" secondAttribute="trailing" constant="20" id="Rx6-HY-Rao"/>
@@ -206,6 +207,7 @@
                     <connections>
                         <outlet property="analysisResultData1TextView" destination="t6V-pp-if2" id="u4R-lU-Fzs"/>
                         <outlet property="analysisResultData2TextView" destination="vLc-vR-qID" id="dkb-yM-9v5"/>
+                        <outlet property="nameLabel" destination="kIo-iK-tmd" id="CGC-ph-SYJ"/>
                         <outlet property="stackView" destination="Foh-fB-0Wh" id="kn7-ha-osP"/>
                     </connections>
                 </viewController>

@@ -12,6 +12,7 @@ import ObjectMapper
 class ApiDataResponse: Mappable {
 
     var formType: Int?
+    var formName: String?
     var data1: [String]?
     var data2: [String]?
 
@@ -20,6 +21,7 @@ class ApiDataResponse: Mappable {
 
     func mapping(map: Map) {
         formType <- map["form_type"]
+        formName <- map["form_name"]
         data1 <- map["data1"]
         data2 <- map["data2"]
     }
