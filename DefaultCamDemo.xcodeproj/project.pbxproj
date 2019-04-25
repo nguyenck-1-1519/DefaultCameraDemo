@@ -14,6 +14,11 @@
 		1B67B0472241330400B0CC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B0462241330400B0CC34 /* Assets.xcassets */; };
 		1B67B04A2241330400B0CC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B67B0482241330400B0CC34 /* LaunchScreen.storyboard */; };
 		1B67B05222413E6400B0CC34 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */; };
+		1B8C304E2271C755000A393B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C304D2271C755000A393B /* SettingViewController.swift */; };
+		1B8C30502271C767000A393B /* ApiUrlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C304F2271C767000A393B /* ApiUrlTableViewCell.swift */; };
+		1B8C30522271C777000A393B /* StructDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C30512271C777000A393B /* StructDefine.swift */; };
+		1B8C30542271C781000A393B /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C30532271C781000A393B /* AppInfo.swift */; };
+		1B8C305822720E48000A393B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C305722720E48000A393B /* UIViewController+Ext.swift */; };
 		61842F252241DB0600B6AD0E /* AnalysisResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */; };
 		61D22F6822423B7800E76D03 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D22F6722423B7800E76D03 /* ApiResponse.swift */; };
 		61D22F6A22423CA600E76D03 /* ApiDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D22F6922423CA600E76D03 /* ApiDataResponse.swift */; };
@@ -31,6 +36,11 @@
 		1B67B0492241330400B0CC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B67B04B2241330400B0CC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		1B8C304D2271C755000A393B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1B8C304F2271C767000A393B /* ApiUrlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrlTableViewCell.swift; sourceTree = "<group>"; };
+		1B8C30512271C777000A393B /* StructDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructDefine.swift; sourceTree = "<group>"; };
+		1B8C30532271C781000A393B /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		1B8C305722720E48000A393B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		3CC69A181BA63C3C4ED8CAF2 /* Pods-DefaultCamDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefaultCamDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DefaultCamDemo/Pods-DefaultCamDemo.release.xcconfig"; sourceTree = "<group>"; };
 		61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResultViewController.swift; sourceTree = "<group>"; };
 		61D22F6722423B7800E76D03 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
@@ -76,6 +86,11 @@
 				1B67B0412241330200B0CC34 /* ViewController.swift */,
 				1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */,
 				61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */,
+				1B8C304D2271C755000A393B /* SettingViewController.swift */,
+				1B8C305722720E48000A393B /* UIViewController+Ext.swift */,
+				1B8C304F2271C767000A393B /* ApiUrlTableViewCell.swift */,
+				1B8C30512271C777000A393B /* StructDefine.swift */,
+				1B8C30532271C781000A393B /* AppInfo.swift */,
 				1B67B0432241330200B0CC34 /* Main.storyboard */,
 				1B67B0462241330400B0CC34 /* Assets.xcassets */,
 				1B67B0482241330400B0CC34 /* LaunchScreen.storyboard */,
@@ -227,7 +242,12 @@
 			files = (
 				1B67B0422241330200B0CC34 /* ViewController.swift in Sources */,
 				61D22F6A22423CA600E76D03 /* ApiDataResponse.swift in Sources */,
+				1B8C305822720E48000A393B /* UIViewController+Ext.swift in Sources */,
 				1B67B05222413E6400B0CC34 /* ImageDetailViewController.swift in Sources */,
+				1B8C30542271C781000A393B /* AppInfo.swift in Sources */,
+				1B8C304E2271C755000A393B /* SettingViewController.swift in Sources */,
+				1B8C30502271C767000A393B /* ApiUrlTableViewCell.swift in Sources */,
+				1B8C30522271C777000A393B /* StructDefine.swift in Sources */,
 				61D22F70224242EB00E76D03 /* BaseRequest.swift in Sources */,
 				1B67B0402241330200B0CC34 /* AppDelegate.swift in Sources */,
 				61D22F6822423B7800E76D03 /* ApiResponse.swift in Sources */,
