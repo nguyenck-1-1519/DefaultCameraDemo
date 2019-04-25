@@ -54,7 +54,7 @@ class ImageDetailViewController: UIViewController {
             multipartFormData: { multipartFormData in
                 multipartFormData.append(imageData, withName: "image", fileName: fileName, mimeType: "image/png")
         },
-            to: "http://192.168.19.18:9669/api/ocr",
+            to: AppInfo.shared.primaryApiUrl,
             encodingCompletion: { [weak self] encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):

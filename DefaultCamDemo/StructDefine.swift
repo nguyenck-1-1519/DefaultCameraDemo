@@ -28,4 +28,5 @@ struct Constant {
     static let okTitle = "OK"
     static let deleteTitle = "Delete"
     static let deleteMultipleTitle = "Delete multiple"
+    static let deletePromt = "Swipe to delete single cell"
 }

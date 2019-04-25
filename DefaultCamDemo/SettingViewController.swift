@@ -29,6 +29,7 @@ class SettingViewController: UIViewController {
         // config navigation bar
         let rightBarButtonItem = UIBarButtonItem(title: Constant.deleteMultipleTitle, style: .plain, target: self, action: #selector(handleDeleteMultipleAction))
         navigationItem.rightBarButtonItem = rightBarButtonItem
+        navigationItem.prompt = Constant.deletePromt
     }
     
     override func viewDidLayoutSubviews() {
