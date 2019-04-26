@@ -12,7 +12,7 @@ extension UIAlertController {
         let selection: ParamsPickerViewController.Selection = selection
         var params = [String]()
         
-        let addParam = UIAlertAction(title: "Add Param", style: .default) { action in
+        let addParam = UIAlertAction(title: "Upload Photo", style: .default) { action in
             selection(params)
         }
         addParam.isEnabled = false

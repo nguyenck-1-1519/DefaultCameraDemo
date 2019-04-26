@@ -28,7 +28,6 @@ class SettingViewController: UIViewController {
             settingData = currentSettingType == .apiUrlSetting ? AppInfo.shared.apiUrls ?? [Constant.defaultApiUrl]
                 : AppInfo.shared.listParameter ?? Constant.fields
             contentLabel.text = currentSettingType == .apiUrlSetting ? "Api Url:" : "Params:"
-            navigationItem.rightBarButtonItem = currentSettingType == .apiUrlSetting ? rightBarButton : nil
         }
     }
     var isTableViewEditing = false {
@@ -45,8 +44,13 @@ class SettingViewController: UIViewController {
         tableView.allowsMultipleSelectionDuringEditing = true
         
         // config navigation bar
-        navigationItem.rightBarButtonItem = rightBarButton
+        navigationItem.title = "Setting"
         navigationItem.prompt = Constant.deletePromt
+        
+        // add gesture
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(recognizer:)))
+        tapGesture.cancelsTouchesInView = true
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func viewDidLayoutSubviews() {
@@ -56,6 +60,10 @@ class SettingViewController: UIViewController {
     }
     
     // MARK: handle action
+    @objc func handleTapGesture(recognizer: UITapGestureRecognizer) {
+        apiUrlTextfield.endEditing(true)
+    }
+    
     @objc func handleDeleteMultipleAction() {
         navigationItem.rightBarButtonItem?.tintColor = isTableViewEditing ? nil : .red
         navigationItem.rightBarButtonItem?.title = isTableViewEditing ? Constant.deleteMultipleTitle : Constant.deleteTitle

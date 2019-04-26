@@ -170,9 +170,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnt-5t-4qJ">
-                                <rect key="frame" x="94" y="420.5" width="187.5" height="30"/>
+                                <rect key="frame" x="95" y="420.5" width="185" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Setting Api Url"/>
+                                <state key="normal" title="   Setting Api Url &amp; Param   "/>
                                 <connections>
                                     <segue destination="muE-uz-ZW3" kind="show" id="rkJ-nG-HAS"/>
                                 </connections>
@@ -180,14 +180,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Wnt-5t-4qJ" firstAttribute="top" secondItem="wde-bQ-TE3" secondAttribute="bottom" constant="40" id="5QZ-jN-5Jr"/>
                             <constraint firstItem="wde-bQ-TE3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CmW-cc-2HI"/>
+                            <constraint firstItem="Wnt-5t-4qJ" firstAttribute="top" secondItem="fCy-IE-Yon" secondAttribute="bottom" constant="40" id="Dve-Bn-E0s"/>
                             <constraint firstItem="wde-bQ-TE3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="IWU-8q-FmE"/>
-                            <constraint firstItem="Wnt-5t-4qJ" firstAttribute="trailing" secondItem="Oq1-9V-saI" secondAttribute="trailing" id="X7a-Fr-FhD"/>
+                            <constraint firstItem="Wnt-5t-4qJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TMS-mM-CN1"/>
                             <constraint firstItem="wde-bQ-TE3" firstAttribute="top" secondItem="pZd-wz-EKv" secondAttribute="bottom" constant="20" id="h42-Ty-vdm"/>
                             <constraint firstItem="pZd-wz-EKv" firstAttribute="centerX" secondItem="wde-bQ-TE3" secondAttribute="centerX" id="nna-ef-gUm"/>
                             <constraint firstItem="wde-bQ-TE3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uFc-QP-vET"/>
-                            <constraint firstItem="Wnt-5t-4qJ" firstAttribute="leading" secondItem="fCy-IE-Yon" secondAttribute="leading" id="uxp-3W-UdS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
