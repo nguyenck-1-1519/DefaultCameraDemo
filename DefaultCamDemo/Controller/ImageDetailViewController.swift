@@ -27,7 +27,7 @@ class ImageDetailViewController: UIViewController {
     private func configButtons() {
         let uploadImage = #imageLiteral(resourceName: "UploadButton").withRenderingMode(.alwaysTemplate)
         let rightUploadButton = UIBarButtonItem(image: uploadImage, style: .plain, target: self,
-                                               action: #selector(uploadImageToServer))
+                                               action: #selector(selectFieldsParameters))
         navigationItem.rightBarButtonItem = rightUploadButton
     }
 
@@ -36,15 +36,26 @@ class ImageDetailViewController: UIViewController {
         backDropView.isHidden = !isShow
     }
 
-    private func showResult(response: ApiResponse) {
+    private func showResult(response: String) {
         guard let resultController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AnalysisResultViewController") as? AnalysisResultViewController else {
             return
         }
-        resultController.analysisResponse = response
+        resultController.analysisResponseString = response
         self.navigationController?.pushViewController(resultController, animated: true)
     }
 
-    @objc private func uploadImageToServer() {
+    @objc private func selectFieldsParameters() {
+        let alertController = UIAlertController(style: .actionSheet, title: AlertTitle.fields,
+                                                message: AlertMessage.selectFields)
+
+        alertController.addParamsPicker { [weak self] params in
+            self?.uploadImageToServer(fields: params)
+        }
+        alertController.addAction(title: "Cancel", style: .cancel)
+        present(alertController, animated: true, completion: nil)
+    }
+
+    @objc private func uploadImageToServer(fields: [String]) {
         // implement api
         guard let image = contentImageView.image else { return }
         guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
@@ -53,6 +64,7 @@ class ImageDetailViewController: UIViewController {
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 multipartFormData.append(imageData, withName: "image", fileName: fileName, mimeType: "image/png")
+                multipartFormData.append(Utilites.getDataParam(fromArray: fields), withName: "fields")
         },
             to: AppInfo.shared.primaryApiUrl,
             encodingCompletion: { [weak self] encodingResult in
@@ -67,15 +79,13 @@ class ImageDetailViewController: UIViewController {
                                 return
                             }
                             if statusCode == 200 {
-                                guard let apiResponse = Mapper<ApiResponse>().map(JSONObject: value) else {
-                                    return
-                                }
-                                self?.showResult(response: apiResponse)
+                                self?.showResult(response: response.description)
                             } else {
                                 let apiResponse = Mapper<ApiResponse>().map(JSONObject: value)
                                 self?.showAlert(isSuccess: false, message: apiResponse?.message)
                             }
                         case .failure(let error):
+                            self?.showIndicator(false)
                             self?.showAlert(isSuccess: false, message: error.localizedDescription)
                             print(error.localizedDescription)
                         }

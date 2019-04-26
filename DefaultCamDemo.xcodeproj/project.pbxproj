@@ -19,6 +19,14 @@
 		1B8C30522271C777000A393B /* StructDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C30512271C777000A393B /* StructDefine.swift */; };
 		1B8C30542271C781000A393B /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C30532271C781000A393B /* AppInfo.swift */; };
 		1B8C305822720E48000A393B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C305722720E48000A393B /* UIViewController+Ext.swift */; };
+		61764EBD2272941A005412E8 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764EBC2272941A005412E8 /* UIAlertController+Extensions.swift */; };
+		61764EBF2272942A005412E8 /* PickerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764EBE2272942A005412E8 /* PickerViewViewController.swift */; };
+		61764EC222729481005412E8 /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764EC122729481005412E8 /* Common+Extensions.swift */; };
+		61764EC422729500005412E8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764EC322729500005412E8 /* UIView+Extensions.swift */; };
+		61764ECA2272E4EC005412E8 /* ParamsPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764EC92272E4EB005412E8 /* ParamsPickerViewController.swift */; };
+		61764ECD2272ED39005412E8 /* ParameterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764ECB2272ED39005412E8 /* ParameterTableViewCell.swift */; };
+		61764ECE2272ED39005412E8 /* ParameterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61764ECC2272ED39005412E8 /* ParameterTableViewCell.xib */; };
+		61764ED022730B95005412E8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61764ECF22730B95005412E8 /* Utilities.swift */; };
 		61842F252241DB0600B6AD0E /* AnalysisResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */; };
 		61D22F6822423B7800E76D03 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D22F6722423B7800E76D03 /* ApiResponse.swift */; };
 		61D22F6A22423CA600E76D03 /* ApiDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D22F6922423CA600E76D03 /* ApiDataResponse.swift */; };
@@ -42,6 +50,14 @@
 		1B8C30532271C781000A393B /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		1B8C305722720E48000A393B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		3CC69A181BA63C3C4ED8CAF2 /* Pods-DefaultCamDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DefaultCamDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DefaultCamDemo/Pods-DefaultCamDemo.release.xcconfig"; sourceTree = "<group>"; };
+		61764EBC2272941A005412E8 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		61764EBE2272942A005412E8 /* PickerViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewViewController.swift; sourceTree = "<group>"; };
+		61764EC122729481005412E8 /* Common+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
+		61764EC322729500005412E8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		61764EC92272E4EB005412E8 /* ParamsPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamsPickerViewController.swift; sourceTree = "<group>"; };
+		61764ECB2272ED39005412E8 /* ParameterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterTableViewCell.swift; sourceTree = "<group>"; };
+		61764ECC2272ED39005412E8 /* ParameterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParameterTableViewCell.xib; sourceTree = "<group>"; };
+		61764ECF22730B95005412E8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisResultViewController.swift; sourceTree = "<group>"; };
 		61D22F6722423B7800E76D03 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		61D22F6922423CA600E76D03 /* ApiDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataResponse.swift; sourceTree = "<group>"; };
@@ -81,22 +97,62 @@
 		1B67B03E2241330200B0CC34 /* DefaultCamDemo */ = {
 			isa = PBXGroup;
 			children = (
+				61764EC72272956C005412E8 /* SupportView */,
+				61764EC62272955C005412E8 /* Helper */,
+				61764EC522729542005412E8 /* Controller */,
+				61764EC022729430005412E8 /* Extension */,
 				61D22F6622423B3500E76D03 /* Model */,
 				1B67B03F2241330200B0CC34 /* AppDelegate.swift */,
-				1B67B0412241330200B0CC34 /* ViewController.swift */,
-				1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */,
-				61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */,
-				1B8C304D2271C755000A393B /* SettingViewController.swift */,
-				1B8C305722720E48000A393B /* UIViewController+Ext.swift */,
-				1B8C304F2271C767000A393B /* ApiUrlTableViewCell.swift */,
-				1B8C30512271C777000A393B /* StructDefine.swift */,
-				1B8C30532271C781000A393B /* AppInfo.swift */,
 				1B67B0432241330200B0CC34 /* Main.storyboard */,
 				1B67B0462241330400B0CC34 /* Assets.xcassets */,
 				1B67B0482241330400B0CC34 /* LaunchScreen.storyboard */,
 				1B67B04B2241330400B0CC34 /* Info.plist */,
 			);
 			path = DefaultCamDemo;
+			sourceTree = "<group>";
+		};
+		61764EC022729430005412E8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1B8C305722720E48000A393B /* UIViewController+Ext.swift */,
+				61764EBC2272941A005412E8 /* UIAlertController+Extensions.swift */,
+				61764EC122729481005412E8 /* Common+Extensions.swift */,
+				61764EC322729500005412E8 /* UIView+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		61764EC522729542005412E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B67B0412241330200B0CC34 /* ViewController.swift */,
+				1B67B05122413E6400B0CC34 /* ImageDetailViewController.swift */,
+				61842F242241DB0600B6AD0E /* AnalysisResultViewController.swift */,
+				1B8C304D2271C755000A393B /* SettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		61764EC62272955C005412E8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1B8C30512271C777000A393B /* StructDefine.swift */,
+				1B8C30532271C781000A393B /* AppInfo.swift */,
+				61764ECF22730B95005412E8 /* Utilities.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		61764EC72272956C005412E8 /* SupportView */ = {
+			isa = PBXGroup;
+			children = (
+				1B8C304F2271C767000A393B /* ApiUrlTableViewCell.swift */,
+				61764EBE2272942A005412E8 /* PickerViewViewController.swift */,
+				61764EC92272E4EB005412E8 /* ParamsPickerViewController.swift */,
+				61764ECB2272ED39005412E8 /* ParameterTableViewCell.swift */,
+				61764ECC2272ED39005412E8 /* ParameterTableViewCell.xib */,
+			);
+			path = SupportView;
 			sourceTree = "<group>";
 		};
 		61D22F6622423B3500E76D03 /* Model */ = {
@@ -189,6 +245,7 @@
 				1B67B04A2241330400B0CC34 /* LaunchScreen.storyboard in Resources */,
 				1B67B0472241330400B0CC34 /* Assets.xcassets in Resources */,
 				1B67B0452241330200B0CC34 /* Main.storyboard in Resources */,
+				61764ECE2272ED39005412E8 /* ParameterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,13 +302,20 @@
 				1B8C305822720E48000A393B /* UIViewController+Ext.swift in Sources */,
 				1B67B05222413E6400B0CC34 /* ImageDetailViewController.swift in Sources */,
 				1B8C30542271C781000A393B /* AppInfo.swift in Sources */,
+				61764ECA2272E4EC005412E8 /* ParamsPickerViewController.swift in Sources */,
 				1B8C304E2271C755000A393B /* SettingViewController.swift in Sources */,
+				61764EC422729500005412E8 /* UIView+Extensions.swift in Sources */,
 				1B8C30502271C767000A393B /* ApiUrlTableViewCell.swift in Sources */,
+				61764EBD2272941A005412E8 /* UIAlertController+Extensions.swift in Sources */,
 				1B8C30522271C777000A393B /* StructDefine.swift in Sources */,
 				61D22F70224242EB00E76D03 /* BaseRequest.swift in Sources */,
 				1B67B0402241330200B0CC34 /* AppDelegate.swift in Sources */,
+				61764ED022730B95005412E8 /* Utilities.swift in Sources */,
+				61764ECD2272ED39005412E8 /* ParameterTableViewCell.swift in Sources */,
 				61D22F6822423B7800E76D03 /* ApiResponse.swift in Sources */,
 				61842F252241DB0600B6AD0E /* AnalysisResultViewController.swift in Sources */,
+				61764EC222729481005412E8 /* Common+Extensions.swift in Sources */,
+				61764EBF2272942A005412E8 /* PickerViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

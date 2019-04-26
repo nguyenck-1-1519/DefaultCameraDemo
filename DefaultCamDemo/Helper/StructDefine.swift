@@ -10,17 +10,20 @@ import Foundation
 
 struct AlertTitle {
     static let error = "Error"
+    static let fields = "Fields parameter"
 }
 
 struct AlertMessage {
     static let fillUrl = "Please type Url first"
     static let addExistedUrl = "Url is existing"
     static let deletePrimaryUrl = "Cant delete primary Api Url"
+    static let selectFields = "Select value of fields"
 }
 
 struct UserDefaultsKey {
     static let primaryApiUrl = "PrimaryApiUrl"
     static let apiUrls = "ApiUrls"
+    static let listParameter = "ListOfParameter"
 }
 
 struct Constant {
@@ -29,4 +32,5 @@ struct Constant {
     static let deleteTitle = "Delete"
     static let deleteMultipleTitle = "Delete multiple"
     static let deletePromt = "Swipe to delete single cell"
+    static let fields = ["nenkin_gaku", "kikan"]
 }
